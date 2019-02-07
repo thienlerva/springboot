@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: zuul
+zuul:
+  routes:
+    location:
+      path: /**/location/**
+    skill:
+      path: /**/skill/**
+#    user-trainee:
+#      path: /**/trainee/**
+#      service-id: user_service
+#    user-trainer:
+#      path: /**/trainer/**
+#      service-id: user_service
+    batch:
+      path: /batch/**
+      service-id: batch-service
+    audit:
+      path: /audit/**
+      service-id: audit-service
+      
+eureka:
+  client:
+    service-url:
+      default-zone: ${EUREKA_HOME}
+      
+server:
+  port: 9090
