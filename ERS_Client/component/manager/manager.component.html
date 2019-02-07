@@ -1,0 +1,36 @@
+<app-managerheader></app-managerheader>
+
+<h1 style="text-align:center">Manager</h1>
+
+<div class="container">
+  <table class="table table-striped">
+    <thead>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Amount</th>
+      <th>Submitted Date</th>
+      <th>Description</th>
+      <th>Resolver</th>
+      <th>Status</th>
+      <th>Type ID</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let reimbursement of reimbursements">
+        <td>{{reimbursement.id}}</td>
+        <td>{{reimbursement.authorId}}</td>
+        <td>{{reimbursement.amount}}</td>
+        <td>{{reimbursement.submittedDate}}</td>
+        <td>{{reimbursement.description}}</td>
+        <td>{{reimbursement.resolverId}}</td>
+        <td>{{reimbursement.status}}</td>
+        <td>{{convertType(reimbursement.typeId)}}</td>
+
+        <td><button class="btn btn-danger" (click)="deleteReimbursemen(reimbursement)">Delete</button>
+        <button class="btn btn-primary" (click)="updateReimbursement(reimbursement)">Edit</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <button (click)="getAuthorName(1)">Get Author Name</button>
+  {{user.username}}
+</div>

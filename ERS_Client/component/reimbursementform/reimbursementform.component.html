@@ -1,0 +1,32 @@
+<app-header></app-header>
+<div class="container">
+  <h1 style="text-align:center">Create Reimbursement</h1>
+    <form (ngSubmit)="onSubmit()" #createForm="ngForm">
+        
+          <div class="form group">
+            <label>Amount</label>
+            <input type="text" class="form-control" required
+                [(ngModel)]="reim.amount" name="amount">
+          </div>
+        
+          <div class="form group">
+              <label>Type</label>
+              <select class="form-control" required
+                [(ngModel)]="typeString" name="typeString">
+          <option *ngFor="let type of types" [value]="type">{{type}}</option>
+        </select>
+          </div>
+
+          <div class="form group">
+              <label>Description</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required
+                  [(ngModel)]="reim.description" name="description"></textarea>
+            </div>
+
+          <div>
+            <button type="submit" class="btn btn-success">Submit</button>
+            
+          </div>
+      
+      </form>
+</div>

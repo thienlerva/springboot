@@ -1,0 +1,70 @@
+<app-managerheader></app-managerheader>
+
+<div class="container">
+  <h1 style="text-align: center">Update Reimbursement</h1>
+
+  <div>
+    <form (ngSubmit)="onSubmit()" #updateForm="ngForm">
+      
+      <div class="form group">
+        <label>ID</label>
+        <input type="text" class="form-control" required
+            [(ngModel)]="reimbursement.id" name="id">
+      </div>
+
+      <div class="form group">
+        <label>AuthorID</label>
+        <input type="text" class="form-control" required
+            [(ngModel)]="reimbursement.authorId" name="authorId">
+      </div>
+
+      <div class="form group">
+        <label>Amount</label>
+        <input type="text" class="form-control" required
+            [(ngModel)]="reimbursement.amount" name="amount">
+      </div>
+
+      <div class="form group">
+        <label>Description</label>
+        <input type="text" class="form-control" required
+            [(ngModel)]="reimbursement.description" name="description">
+      </div>
+
+      <div class="form group">
+        <label>Status</label>
+        <select class="form-control" required
+          [(ngModel)]="reimbursement.status" name="status">
+          <option *ngFor="let status of statuses" [value]="status">{{status}}</option>
+        </select>
+      </div>
+
+    <div class="form group">
+      <label>TypeID</label>
+      <input type="text" class="form-control" required
+          [(ngModel)]="reimbursement.typeId" name="typeId">
+    </div>
+    
+      <!-- <div class="form group">
+          <label>Type</label>
+          <select class="form-control" required
+            [(ngModel)]="typeString" name="typeString">
+      <option *ngFor="let type of types" [value]="type">{{type}}</option>
+    </select>
+      </div> -->
+
+      <!-- <div class="form group">
+          <label>Description</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required
+              [(ngModel)]="reim.description" name="description"></textarea>
+        </div> -->
+
+      <div>
+        <button type="submit" class="btn btn-success">Submit</button>
+        
+      </div>
+  
+    </form>
+  </div>
+
+</div>
+

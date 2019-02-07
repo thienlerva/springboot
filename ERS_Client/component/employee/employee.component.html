@@ -1,0 +1,32 @@
+<app-header></app-header>
+<h1 id="title">Reimbursements</h1>
+<div class="container">
+  <table class="table table-striped">
+    <thead>
+      <th>ID</th>
+      <th>Amount</th>
+      <th>Submitted Date</th>
+      <th>Description</th>
+      <th>Resolver</th>
+      <th>Status</th>
+      <th>Type ID</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let reim of reimbursements">
+        <td>{{reim.id}}</td>
+        <td>{{reim.amount}}</td>
+        <td>{{reim.submittedDate}}</td>
+        <td>{{reim.description}}</td>
+        <td>{{reim.resolverId}}</td>
+        <td>{{reim.status}}</td>
+        <td>{{reim.typeId}}</td>
+
+        <td><button class="btn btn-danger" (click)="deleteBook(book)">Delete</button>
+        <button class="btn btn-primary" (click)="updateBook(book)">Edit</button></td>
+      </tr>
+    </tbody>
+  </table>
+    <button class="btn btn-primary" (click)="newReim()">Add New Reimbursement</button>
+</div>
+
+<app-footer></app-footer>
