@@ -1,0 +1,106 @@
+Hibernate
+•	What is Hibernate
+o	Is an object-relational mapping tool for Java
+o	It provides a framework for mapping an object-oriented domain model to a relational database
+•	What is an ORM tool 
+o	Object-Relational Mapping tool that can be used to make CRUD operations to databases much simpler and efficient by configuring XML files to carry out their work
+•	How do I configure a hibernate application 
+o	Main configuration is hibernate.cfg.xml
+o	Mapping configuration either in xml or annotations
+•	HQL
+o	Hibernate Query Language
+o	Is fully object-oriented and understands notions like inheritance, polymorphism, and association
+•	Important interfaces in the Hibernate API
+•	Session 
+•	Represents your session with a database 
+•	Methods: save, get, update, delete, beginTransaction, createQuery, createCriteria
+Session session = sessionFactory.openSession();
+//stuff
+session.close();
+•	SessionFactory
+•	Used to create session objects.
+•	Only need One sessionFactory
+•	Configuration
+•	Used to create a sessionFactory
+•	Specify location of hibernate.cfg.xml
+SessionFactory sessionFactory = new Configuration().configure("hibernate.cfg.xml").buildSessionFactory()
+•	Criteria
+•	Can only retrieve from database
+•	Cannot modify anything
+List<BankUser> bankUsers = criteria.list();
+•	Transaction
+•	Autocommit is false by default
+•	This means, you must begin and commit a transaction if you modify anything
+Transaction tx = session.beginTransaction();
+//stuff
+tx.commit();
+•	Query
+•	Can do more complicated CRUD than the session method. 
+•	Use hibernate query language (HQL)
+•	Hibernate object states 
+•	Transient
+	An object not associated with a hibernate session and doesn't represent a row in the database
+•	Persistent
+	An object that is associated with a hibernate session, it represents a row in the database and consists of an identifier value
+•	Detached
+	An object removed from a hibernate session, can contain an identity but can't do persistence operations with that identity
+•	Hbm2ddl
+•	Update: updates schema
+•	Create: creates schema, destroys previous data
+•	Validate: makes no changes, validates data
+•	Create-drop: Drop the schema when session factory is closed
+•	ACID
+•	Atomicity
+	All operations are done or all operations are not
+•	Consistency
+	After a transaction is completed successfully, the data in the database should be consistent 
+•	Isolation
+	If two transactions are working with the same data, one transaction won't disturb the other
+•	Durability 
+	After a transaction is completed, the data will persist until another transaction is performed on that data
+•	Criteria vs Query
+•	A query can be used to perform SELECT, INSERT, UPDATE, DELETE
+	SQL injection is possible
+•	Criteria can only be used to perform SELECT
+•	Session.load()
+•	Returns a proxy without hitting the database 
+	A proxy is an object given an identifier value, its properties are not yet initialized 
+•	If no row is found it throws an ObjectNotFoundException
+•	Session.get()
+•	Immediately hits the database and returns the actual object representing the row
+•	If no row is found, it throws null
+•	Session.update()
+•	It checks if the object exists in the session cache or not, if the object exists then it throws an exception call NonUniqueObjectException
+•	Session.merge()
+•	Checks if the object exists in the session cache or not, If the object exists then the current changes are copied in to the cache, otherwise it loads the values to the cache
+	Update a persistent entity with new field values from a detached entity
+•	Session.save()
+•	It returns an identifier, and if an INSERT is called to get the identifier, it happens immediately regardless if you're inside or outside a transaction
+•	Session.persist()
+•	Changes an object from the transient state to the persistent state
+•	Doesn't guarantee that the identifier value will be assigned 
+•	How can i bring a detached object into the persistent state
+•	Can a detached object become transient again?
+•	What are some tags in the hibernate configuration file 
+•	What are some annotations associated with hibernate
+•	What are some exceptions associated with hibernate?
+•	--- 
+•	Automatic dirty checking
+•	When session is closed, hibernate checks for changes and any persistent objects and puts them in the detached state
+•	Transactional write-behind
+•	In the context of a transaction, changes made to an object in the persistent state are not immediately propagated to the DB.
+•	Transitive Persistence (cascades)
+•	No default cascading of state between related entities
+•	Available cascade styles: create, merge, save – update, delete, lock, refresh, evict, replicate
+•	Typically cascade one to many & many to one
+•	Not one to one or many to many
+•	Hibernate caching levels 
+•	L1 vs L2
+•	Multiplicity
+•	@OneToOne
+•	@ManyToOne
+•	@ManyToMany
+•	@JoinColumn
+•	Mapping classes with hbm files 
+•	Named queries 
+•	PURPL (azy Load)

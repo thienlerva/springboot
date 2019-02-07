@@ -1,0 +1,132 @@
+	- Tell me about yourself technically
+	- Walk me through your latest project 
+	- Tell me specifically about your role in this project
+	- Explain the data flow
+		○ Db --> ORM framework --> exposure framework --> consuming framework
+	- Biggest challenge 
+		○ Always make this into a learning experience/positive
+	- Explain Four pillars OOP- 
+	- String vs stringbuffer
+		○ Stringbuffer stores data on heap
+		○ String is in string pool, is immutable
+	- Methods of stringbuffer
+		○ Append
+	- Can you overload a constructor
+	- Difference between for loop and while loop
+	- Describe a switch statement. What datatypes can it work with
+	- What are exceptions, explain the different types
+	- How do you create your own exceptions
+		○ Extend exception or RuntimeException with a new class, add new functionality 
+		○ How to convert primitive data into objects
+	- Serialization 
+	- Abstract class vs interface
+	- Static method vs non-static method
+	- Set vs List
+		○ Methods in both
+	- Vector vs ArrayList
+	- HashMap vs ArrayList
+	- Set vs Map
+	- What is an iterator 
+	- .equals method, hash
+	- Tell me about java threads
+	- Lifecycle of a thread
+		○ https://www.javatpoint.com/life-cycle-of-a-thread
+	- Describe deadlock
+	- Servlets -- how do they work, how do they receive and process requests then generate a response
+	- How do we programmatically create a servlet
+	- Servlet config vs servlet context
+	- Two important method that help process a request
+	- Forward vs redirect
+	- What is Spring
+	- What modules of spring are you familiar with 
+	- Explain the spring bean lifecycle 
+		○ https://www.journaldev.com/2637/spring-bean-life-cycle
+	- What are the different ways to configure a class as a spring bean 
+	- What are the spring annotations
+		○ Component, Service, Controller, Repository, RestController?*
+	- Different types of dependency injection you’ve used
+	- Manual bean wiring vs autowiring 
+	- Different modes of autowiring in spring 
+		Default, no auto wiring, set it manually via “ref” attribute. In case of autodetect – If a default constructor is found, use “autowired by constructor”; Otherwise, use “autowire by type”
+		
+		From <https://www.google.com/search?q=autowiring+in+spring+defauly&rlz=1C1MKDC_enUS773US773&oq=autowiring+in+spring+defauly&aqs=chrome..69i57j0l2.3405j1j9&sourceid=chrome&ie=UTF-8> 
+		
+	- Bean scopes 
+		○ https://docs.spring.io/spring/docs/3.0.0.M3/reference/html/ch04s04.html
+	- Spring MVC architecture 
+	- What does the view resolver do?
+	- Controller vs restcontroller 
+	- Annotations that you’ve used in spring mvc
+	- "What do you know about Spring AOP"
+	- Difference between concern and cross cutting concern 
+	- How do you handle exceptions in Spring MVC
+	- Hibernate
+	- What is the difference between HQL and  SQL
+	- Core interfaces associated with hibernate
+	- Session vs sessionfactory
+		○ Session is an abstraction of a db connection
+		○ SF produces sessions
+	- What are some methods you've used with a session 
+	- Different states of a hibernate object
+	- Default fetching strategy in hibernate 
+		○ Lazy load
+	- HQL vs Criteria
+	- Get vs load method
+	- Important annotations you’ve used in hibernate mapping
+	- How do you handle exceptions in hibernate
+	- How extensively have you used Junit
+	- Annotations you've used with Junit
+	- What is the use of the @test 
+	- @before vs @before class
+	- Junit @RunWith 
+		○ http://www.baeldung.com/junit-5-runwith
+	- Can junit be used for testing your entire application 
+	- "what is your understanding of web services"
+	- Annotation you used for SOAP web services
+	- How do you know you've created a SOAP service
+	- "can you explain the WSDL structure in detail"
+	- Binding vs porttype
+	- Explain the soap message structure
+	- How can a client consume a soap service
+	- How are exceptions handled with soap
+	- How do we create a restful web service
+	- How do you consume a rest web service from the client
+	- What annotations are associated with REST
+	- How do you handle exceptions in REST
+		○ REST doesn’t have built  in exception handling, must rely on HTTP status codes
+	- SQL - primary key vs foreign key
+	- What are the different kinds of joins
+	- What kind of join allows for null values
+	- Where vs having
+	- Delete vs truncate
+	- Return everyone who makes more money than john
+	- What is the difference between stored procedures and functions
+	- JS, JSON, AJAX, jQuery
+	- Angular - how do you bootstrap your application; what's considered to be the entry point
+	- Where do you declare your components in module.ts
+	- What is a template
+	- How do you inject your template into the view
+	- What is a decorator
+	- "can you talk about the HttpModule"
+	- Microservices, pros and cons 
+	- What are the main advantages of using spring boot 
+	- How do you load changes to a spring boot app without restarting your server
+		○ Spring boot dev tools(a dependency), when you save new changes it auto refreshes 
+	- What is a spring boot actuator
+		Spring boot sub-project; Actuators enable production-ready features to a Spring Boot application – without having to actually implement these things yourself.
+		
+		From <http://www.baeldung.com/spring-boot-actuators> 
+	- How do you run your spring boot app on a custom port
+	- What is the main advantage of using microservices 
+	- Which service registry did you use
+	- How do you enable eureka - know annotations and what goes into application.yml/properties file 
+	- What are the Zuul components
+	- Zuul filters
+	- What's a config server
+	- How do you start your spring boot application with Zuul
+	- Describe docker - replicates your production environment 
+	- Can you explain the workflow for docker
+		○ Dockerfile to create an image
+		○ Use image to create container
+		○ Can save images on dockerhub
+	- Hystrix

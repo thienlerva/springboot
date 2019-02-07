@@ -1,0 +1,94 @@
+David/Tejas
+Mostly technical
+jvm/jre/jdk
+Collections 
+sql, joins
+Jdbc, statement workflow 
+Angular, promises 
+What is the DOM
+Spring annotations 
+Modifiers (e.g. static)
+Inheritance 
+Interface v Abstract class
+Bean scopes
+Reverse a string
+
+
+Murali
+Mostly behavioral 
+Past experiences (development related or not)
+Strengths
+Unit testing
+Mistakes made, how you overcame them
+How you’ve focused on continuous improvement
+Examples of taking initiative on a project
+Proficiency levels (rate yourself)
+Full stack explanation
+How to manage time/delegate responsibilities
+Optimize p2 code
+
+
+Navin
+Mostly technical
+College experience
+How their time at Revature is going
+Encapsulation 
+JS Encapsulation
+Multithreading and servlets
+Stack vs. heap
+Bean scopes
+HTML 4 v 5
+Compilation vs interpretation
+Angular opinion 
+Collections, high level
+Get vs post
+Let, var, const
+CSS, margin v padding
+Garbage collection
+try/catch, catch necessary?
+Benefit of jdbc over hibernate
+DOM manipulation 
+When you’d want to use Integer over int
+Equals and hashcodes
+
+Vijay:
+Process would go through when tackling a complex problem
+Describe how you would go about satisfying a specific user requirement
+How to debug with a lot stress/load on an application 
+Tracking user input from front end to back end 
+More technical but high level 
+Asked about experience with microservices when it was mentioned (even though it was left out of interview topics)
+
+
+Could have improved:
+Debugging tools
+More whiteboarding 
+Deeper analysis into software development concepts 
+What kind of questions to expect 
+Defending implementation choices (e.g. collections)
+Skill level ranking 
+More focus on git (in general training, not specific to JPMC -> how to solve merges)
+
+
+Helpful:
+Breadth of technologies 
+Felt confident with technologies  
+Sounded like we were using great tools (David)
+Talked about projects, project based learning prepared (David)
+Talk about technologies outloud 
+One on one’s and QC’s were really helpful (William and Andrew are a good combo)
+Computers set up, better consistency 
+
+
+
+
+
+Most helpful:
+Paired programming exercises 
+Focus on code quality/best practices in project 2 
+Collaborative/Best practices QC
+Being put on the spot earlier
+Mock QC’s 
+Kahoot, cumulative exercise - allows you to figure out what you didn’t know 
+
+
