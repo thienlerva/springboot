@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="Bookstore-boot"/>
+<aop-project name="ERS-spring-boot"/>
+<aop-project name="caliber-quality-audit-service"/>
+<aop-project name="ERS-BackEnd"/>
+</aop-reference-model>
