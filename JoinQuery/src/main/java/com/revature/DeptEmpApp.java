@@ -8,6 +8,7 @@ public class DeptEmpApp {
 
 	public static void main(String[] args) {
 		SpringApplication.run(DeptEmpApp.class, args);
+		
 	}
 
 }

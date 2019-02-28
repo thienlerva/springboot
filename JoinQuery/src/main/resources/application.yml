@@ -3,7 +3,7 @@ spring:
     name: ers-service   
   
   datasource:
-    url: jdbc:h2:mem:caliber;Mode=Oracle
+    url: jdbc:h2:mem:testdb;Mode=Oracle
     platform: h2
   jpa:
     show-sql: true
