@@ -1,6 +1,7 @@
 package com.jpmc.controller;
 
 import com.jpmc.models.Employee;
+import com.jpmc.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,13 +17,16 @@ public class EmployeeController {
     @Autowired
     EmployeeRepository employeeRepository;
 
+    @Autowired
+    EmployeeService employeeService;
+
     @GetMapping("/all")
-    public List<Employee> getAllEmployee() {
-        return employeeRepository.findAll();
+    public List<Employee> getAll() {
+        return employeeService.getAll();
     }
 
-    @PostMapping("create")
+    @PostMapping("/create")
     public Employee create(@Validated @RequestBody Employee employee) {
-        return employeeRepository.save(employee);
+        return employeeService.create(employee);
     }
 }
