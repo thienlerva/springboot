@@ -1,0 +1,1 @@
+insert into student values (1, 'Anthony Le', 804-245, 'gmail.com');

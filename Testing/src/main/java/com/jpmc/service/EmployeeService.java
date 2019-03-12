@@ -20,4 +20,20 @@ public class EmployeeService {
     public Employee create(Employee employee) {
         return employeeRepository.save(employee);
     }
+
+    public Employee findById(Integer id) {
+        return employeeRepository.getOne(id);
+    }
+
+    public void delete(Integer id) {
+         employeeRepository.deleteById(id);
+    }
+
+    public boolean exists(Employee employee) {
+        List<Employee> employeeList = employeeRepository.findAll();
+        if(employeeList.contains(employee)) {
+            return true;
+        }
+        return false;
+    }
 }
