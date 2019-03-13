@@ -1,4 +1,4 @@
-package com.mybatis.repository;
+package com.mybatis.mapper;
 
 import com.mybatis.model.Student;
 import org.apache.ibatis.annotations.Mapper;

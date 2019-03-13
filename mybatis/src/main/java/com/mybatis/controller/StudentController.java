@@ -1,7 +1,7 @@
 package com.mybatis.controller;
 
 import com.mybatis.model.Student;
-import com.mybatis.repository.StudentMapper;
+import com.mybatis.mapper.StudentMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
