@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: Email-service
+  profiles:
+    active: local
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/quartz_demo?serverTimezone=UTC
+    username: root
+    password: password
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties.hibernate.dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+
+  quartz.job-store-type: jdbc
+  quartz.properties.org.quartz.threadPool.threadCount: 5
+
+  mail.host: smtp.gmail.com
+  mail.port: 587
+  mail.username: thienle112014@gmail.com
+  mail.password: myhome1049
+
+  mail.properties.mail.smtp.auth: true
+  mail.properties.mail.smtp.starttls.enable: true

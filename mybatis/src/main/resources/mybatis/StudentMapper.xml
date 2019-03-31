@@ -11,7 +11,7 @@
     </resultMap>
 
     <select id="findAll" resultMap="baseResultMap">
-        select id,name as student_name ,phone,email, courseId from student
+        select id, name as student_name ,phone,email, courseId from student
     </select>
     <select id="findById" resultMap="baseResultMap">
         select * from student WHERE id=#{id}

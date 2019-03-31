@@ -1,4 +1,12 @@
-set Mode Oracle;
+create table user (
+    id primary key,
+    firstName varchar(100),
+    lastName varchar(100),
+    username varchar(100),
+    password varchar(100)
+    );
+
+
 create table student (
     id int not null primary key,
     name varchar(255) not null,
