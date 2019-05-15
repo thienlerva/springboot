@@ -20,7 +20,9 @@ public class AgeCalculator {
 
         System.out.println(over18(19) ? "Yes" : "No");
 
-         //System.out.println(calculateAge());
+         //System.out.println(2/0);
+
+        System.out.println(division(5,0));
 
     }
 
@@ -57,5 +59,10 @@ public class AgeCalculator {
         DateTimeFormatter f = DateTimeFormatter.ofPattern("MMMM dd, yyyy");
         return "You were born on: " + " " + dob.getDayOfWeek() + " " + dob.format(f) +
                 " .You are: " + y + " years " + m + " month " + d + " old";
+    }
+
+    static int division(int a, int b) {
+         if(b==0) throw new ArithmeticException("Number is 0");
+         return a/b;
     }
 }

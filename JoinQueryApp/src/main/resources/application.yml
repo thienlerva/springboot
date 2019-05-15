@@ -18,4 +18,6 @@ spring:
     ddl-auto: create
 
 mybatis.type-aliases-package: com.jpmc.JoinQueryApp.model
-mybatis.mapper-locations: mybatis/*.xml
+mybatis:
+  mapper-locations:
+  - classpath:/mybatis/*.xml
