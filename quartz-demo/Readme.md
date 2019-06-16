@@ -1,0 +1,3 @@
+Mysql
+Quartz scheduler
+javaemail

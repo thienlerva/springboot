@@ -16,8 +16,15 @@
         select * from PRODUCT;
     </select>
     <select id="findById" resultMap="productResultMap">
-        select * from PRODUCT WHERE id=#{id};
+        select * from PRODUCT WHERE PRODUCT_ID=#{id};
     </select>
+
+    <select id="getProductList" resultMap="productResultMap">
+        SELECT * FROM PRODUCT WHERE PRODUCT_ID IN
+        <foreach collection="productIds" index="index" item="productId"
+                 open = "(" separator= ", " close = ")">#{productId}</foreach>
+    </select>
+
     <insert id="insert" parameterType="product" useGeneratedKeys="true" keyProperty="productId">
         insert into PRODUCT(product_id, product_name, product_price, customer_id)
         VALUES(#{productId}, #{productName},#{price},#{customerId});

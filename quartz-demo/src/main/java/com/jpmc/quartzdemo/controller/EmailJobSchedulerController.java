@@ -30,9 +30,6 @@ public class EmailJobSchedulerController {
     public ResponseEntity<ScheduleEmailResponse> scheduleEmail(@Valid @RequestBody ScheduleEmailRequest scheduleEmailRequest) {
         try {
             ZonedDateTime dateTime = ZonedDateTime.of(scheduleEmailRequest.getDateTime(), scheduleEmailRequest.getTimeZone());
-            log.info("---------{}", dateTime);
-            log.info("---------{}", ZonedDateTime.now());
-
             if(dateTime.isBefore(ZonedDateTime.now())) {
                 ScheduleEmailResponse scheduleEmailResponse = new ScheduleEmailResponse(false,
                         "dateTime must be after current time");
@@ -47,7 +44,7 @@ public class EmailJobSchedulerController {
                     jobDetail.getKey().getName(), jobDetail.getKey().getGroup(), "Email Scheduled Successfully!");
             return ResponseEntity.ok(scheduleEmailResponse);
         } catch (SchedulerException ex) {
-            log.debug("Error scheduling email", ex);
+            log.error("Error scheduling email", ex);
 
             ScheduleEmailResponse scheduleEmailResponse = new ScheduleEmailResponse(false,
                     "Error scheduling email. Please try later!");

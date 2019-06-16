@@ -2,5 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/SpringBootBatchCvsToDb" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/spring-boot-websocket-example" vcs="Git" />
   </component>
 </project>

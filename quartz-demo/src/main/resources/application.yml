@@ -20,7 +20,7 @@ spring:
   mail.host: smtp.gmail.com
   mail.port: 587
   mail.username: thienle112014@gmail.com
-  mail.password: Let14@vcu
+  mail.password: Let14vcu
 
   mail.properties.mail.smtp.auth: true
   mail.properties.mail.smtp.starttls.enable: true

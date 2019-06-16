@@ -61,34 +61,4 @@ public class FeedbackController {
         mailSender.send(mailMessage);
     }
 
-//    @PostMapping("/send")
-//    public String sendEmail(@RequestBody EmailMessage emailMessage) {
-//        sendMail(emailMessage);
-//        return "Email sent successfully";
-//    }
-//
-//    private void sendMail(EmailMessage emailMessage) {
-//
-//        Properties props = new Properties();
-//        props.put("mail.smtp.auth", "true");
-//        props.put("mail.smtp.starttis.enable", "true");
-//        props.put("mail.smtp.host", "smtp.gmail.com");
-//        props.put("mail.smtp.port", "587");
-//
-//        Session session = Session.getInstance(props,
-//                new javax.mail.Authenticator() {
-//            protected PasswordAuthentication getPasswordAuthentication() {
-//                return new PasswordAuthentication(username, password);
-//            }
-//                });
-//
-//        Message msg = new MimeMessage(session);
-//        msg.setFrom(new InternetAddress(username, false));
-//
-//        msg.setRecipients(Message.RecipientType.TO, InternetAddress.parse("thienle112014@gmail.com"));
-//        msg.setSubject(emailMessage.getSubject());
-//        msg.setContent(emailMessage.getBody(), "text/html");
-//        msg.setSentDate(new Date());
-//    }
-
 }

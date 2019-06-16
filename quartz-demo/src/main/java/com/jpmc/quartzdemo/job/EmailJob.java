@@ -6,6 +6,7 @@ import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.mail.MailProperties;
+import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.scheduling.quartz.QuartzJobBean;
@@ -49,6 +50,7 @@ public class EmailJob extends QuartzJobBean {
             messageHelper.setTo(toEmail);
 
             mailSender.send(message);
+
         } catch (MessagingException ex) {
             log.error("Failed to send email to {}", toEmail);
         }

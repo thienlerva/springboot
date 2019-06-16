@@ -2,11 +2,14 @@ package com.jpmc.JoinQueryApp.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
 public class Product {
 

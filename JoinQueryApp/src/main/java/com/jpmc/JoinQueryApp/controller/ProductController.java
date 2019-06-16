@@ -7,8 +7,10 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.math.BigInteger;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Random;
+import java.util.Set;
 
 
 @RestController
@@ -30,5 +32,14 @@ public class ProductController {
 
         product.setProductId(BigInteger.valueOf(random.nextInt(1000)));
         return productMapper.insert(product);
+    }
+
+    @PostMapping("/getProductList")
+    List<Product> getProductList() {
+        Set<BigInteger> productIds = new HashSet<>();
+        productIds.add(BigInteger.valueOf(10));
+        productIds.add(BigInteger.valueOf(11));
+
+        return productMapper.getProductList(productIds);
     }
 }

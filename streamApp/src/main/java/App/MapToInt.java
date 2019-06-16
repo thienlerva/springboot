@@ -4,11 +4,15 @@ import com.google.common.collect.Lists;
 import model.Employee;
 import org.springframework.util.StringUtils;
 
+import java.awt.*;
 import java.math.BigInteger;
 import java.util.*;
+import java.util.List;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+
+import static org.apache.logging.log4j.util.Strings.isNotEmpty;
 
 public class MapToInt {
 
@@ -83,5 +87,19 @@ public class MapToInt {
         System.out.println(functionMap);
 
         StringUtils.isEmpty(employee1);
+
+        Map<Color, Integer> colorIntegerMap = new HashMap<>();
+
+        colorIntegerMap.put(Color.yellow, 1);
+        colorIntegerMap.put(Color.green, 2);
+        colorIntegerMap.put(Color.BLACK, 1);
+
+        System.out.println(colorIntegerMap.size());
+
+        for (Map.Entry<Color, Integer> entry : colorIntegerMap.entrySet()) {
+            System.out.println("Color: " + entry.getKey() + "\n" + "Value: " + entry.getValue());
+        }
+
+        System.out.println(isNotEmpty("Hi") ? "Hi" : "Empty");
     }
 }
